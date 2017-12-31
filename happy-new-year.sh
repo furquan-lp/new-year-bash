@@ -4,6 +4,16 @@
 name='subins2000'
 correction=0
 
+if [ "$1" = "--help" ]; then
+    echo "format: ./happy-new-year.sh [NAME] [CORRECTION]"
+    echo "NAME is the name string displayed at the bottom ('subins200' by default)."
+    echo "CORRECTION is a +ve/-ve value to correctly align the year text into the centre."
+    exit
+elif [ $# != 0 ]; then
+    name="$1"
+    correction=$2
+fi
+
 trap "tput reset; tput cnorm; exit" 2
 clear
 
