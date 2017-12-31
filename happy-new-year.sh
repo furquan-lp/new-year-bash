@@ -81,5 +81,5 @@ while true; do
     echo '*'
 
     tput cup $((line+15)) $((middle_column-(${#name}/3)))
-    echo $name
+    echo -e "\e[3m$name\e[0m"
 done
