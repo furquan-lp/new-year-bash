@@ -5,6 +5,7 @@ name='subins2000'
 correction=0
 
 if [ "$1" = "--help" ]; then
+    clear
     echo "format: ./happy-new-year.sh [NAME] [CORRECTION]"
     echo "NAME is the name string displayed at the bottom ('subins200' by default)."
     echo "CORRECTION is a +ve/-ve value to correctly align the year text into the centre."
